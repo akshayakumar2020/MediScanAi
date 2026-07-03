@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: mediscan-backend
+    runtime: java
+    rootDir: backend
+    buildCommand: mvn clean package
+    startCommand: java -jar target/*.jar
+    plan: free

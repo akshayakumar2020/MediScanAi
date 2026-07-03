@@ -1,0 +1,139 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  height: 72px;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.logo-ai {
+  color: var(--secondary);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: var(--primary);
+}
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 8px;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 968px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-menu.open {
+    transform: translateX(0);
+  }
+
+  .navbar-link {
+    font-size: 18px;
+  }
+
+  .navbar-auth {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar-auth .btn {
+    width: 100%;
+  }
+}

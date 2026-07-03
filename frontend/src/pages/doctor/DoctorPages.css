@@ -1,0 +1,135 @@
+/* Doctor Pages CSS - inherits from UserPages.css and global styles */
+
+.doctor-review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.diagnosis-form {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.diagnosis-form h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.patient-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.patient-detail-item {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.patient-detail-label {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.patient-detail-value {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.schedule-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.schedule-item:hover {
+  border-color: var(--secondary);
+}
+
+.schedule-time {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.schedule-time-value {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.schedule-patient {
+  flex: 1;
+}
+
+.schedule-patient-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.schedule-patient-reason {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.pending-status-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding: 40px;
+  background: var(--bg);
+}
+
+.pending-status-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #FEF3C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.pending-status-page h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.pending-status-page p {
+  color: var(--text-light);
+  max-width: 450px;
+  line-height: 1.7;
+}
+
+@media (max-width: 968px) {
+  .doctor-review-grid {
+    grid-template-columns: 1fr;
+  }
+  .patient-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

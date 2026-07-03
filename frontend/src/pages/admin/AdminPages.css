@@ -1,0 +1,76 @@
+/* Admin Pages CSS */
+
+.admin-action-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.system-health-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.health-check-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.health-check-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.health-check-icon.healthy {
+  background: #DCFCE7;
+}
+
+.health-check-icon.warning {
+  background: #FEF3C7;
+}
+
+.health-check-icon.error {
+  background: #FEE2E2;
+}
+
+.health-check-info {
+  flex: 1;
+}
+
+.health-check-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.health-check-status {
+  font-size: 13px;
+}
+
+.health-check-status.healthy { color: var(--accent); }
+.health-check-status.warning { color: var(--warning); }
+.health-check-status.error { color: var(--danger); }
+
+.health-check-latency {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .system-health-grid {
+    grid-template-columns: 1fr;
+  }
+}

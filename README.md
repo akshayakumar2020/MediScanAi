@@ -70,8 +70,6 @@ An AI-powered healthcare platform that enables patients to book appointments, up
 - Google Gemini API
 - Cloudinary
 - Google Calendar API
-- Tesseract OCR
-- Apache PDFBox
 
 ---
 

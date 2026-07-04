@@ -71,3 +71,12 @@ mvn spring-boot:run
 - PUT /api/admin/doctors/reject/{id}
 - GET /api/admin/analytics
 - GET /api/admin/system-health
+
+## Deployment (Render)
+
+1. Connect your repository to Render and create a new **Web Service**.
+2. **Build Command**: `mvn clean package -DskipTests`
+3. **Start Command**: `java -jar target/mediscan-ai-1.0.0.jar`
+4. Go to the **Environment** tab and add all the variables from your `.env` file (e.g., `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, `JWT_SECRET`, etc.).
+   *Note: For `DB_URL` using Supabase, make sure to use the **Connection Pooler (IPv4)** connection string.*
+5. Ensure `application.properties` has `cors.allowed-origins` updated to include your frontend URL (e.g., `https://<your-vercel-app-url>.vercel.app`).
